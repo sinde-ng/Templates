@@ -1,0 +1,51 @@
+@import url('./../css/style.css');
+
+.container {
+    display: grid;
+    grid-template-areas: "header header header"
+                        "articleA asideB asideA"
+                        "articleB asideB asideA"
+                        "footer footer footer";
+    grid-template-columns: 300px 200px 200px;
+    grid-template-rows: 40px 150px 150px 35px;
+    gap: var(--Gap);
+    font-weight: var(--fontWeight);
+    font-size: var(--fontSize);
+    color: var(--White);
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header,footer {
+    background: var(--Orange);
+}
+
+article.A,aside.A { 
+    background: var(--Pink);
+} article.B,aside.B {
+    background: var(--Blue);
+}
+
+header {
+    grid-area: header;
+}
+
+article.A {
+    grid-area: articleA;
+} article.B {
+    grid-area: articleB;
+}
+
+aside.A {
+    grid-area: asideA;
+} aside.B {
+    grid-area: asideB;
+}
+
+footer {
+    grid-area: footer;
+}
